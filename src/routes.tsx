@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+
 import Layout from './components/Layout';
 
 import IntroPage from './pages/IntroPage';

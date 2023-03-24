@@ -7,6 +7,23 @@ const app = express();
 
 const BASE_IMAGE_URL = 'http://localhost:3000/images';
 
+interface Food {
+  id: string,
+  name: string,
+  price: number,
+  image: string,
+}
+
+interface Order {
+  id: string,
+  menu: Food[],
+  totalPrice: number,
+}
+
+const state: { orders: Order[] } = {
+  orders: [],
+};
+
 app.use(cors());
 app.use(express.json());
 
@@ -16,8 +33,25 @@ app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
+app.get('/orders/:id', (req, res) => {
+  const { id } = req.params;
+
+  const { orders } = state;
+  const order = orders.find((i) => i.id === id);
+
+  if (!order) {
+    res.status(404).send({});
+    return;
+  }
+
+  res.status(200).send({ order });
+});
+
 app.post('/orders', (req, res) => {
-  const { menu, totalPrice } = req.body;
+  const {
+    menu,
+    totalPrice,
+  } = req.body;
 
   const receipt = {
     id: Date.now().toString(),
@@ -25,7 +59,12 @@ app.post('/orders', (req, res) => {
     totalPrice,
   };
 
-  res.status(201).send({ receipt });
+  state.orders = [
+    ...state.orders,
+    receipt,
+  ];
+
+  res.status(201).send({ id: receipt.id });
 });
 
 app.get('/restaurants', (req, res) => {
@@ -186,5 +225,6 @@ app.get('/restaurants', (req, res) => {
 });
 
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`Server running at http://localhost:${port}`);
 });

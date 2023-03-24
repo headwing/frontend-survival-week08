@@ -12,6 +12,9 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -47,7 +50,14 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: [
+        '**/*.test.js',
+        '**/*.test.jsx',
+        '**/*.test.ts',
+        '**/*.test.tsx',
+      ],
+    }],
     'import/extensions': ['error', 'ignorePackages', {
       js: 'never',
       jsx: 'never',

@@ -1,11 +1,33 @@
 # Express REST API 만들기
 
-데브로드 프론트엔드 생존코스 4주차 과제 풀이
+데브로드 프론트엔드 생존코스 8주차 과제 풀이
 
-## 실행하기
+## 서버 실행하기
+
+```shell
+cd express-app
+
+npm install
+
+npx nodemon app.ts
+```
+
+## 프론트 실행하기
 
 ```shell
 npm install
 
-npx nodemon app.ts
+npm start
+```
+
+## Unit 테스트 
+
+```shell
+npm test
+```
+
+## E2E 테스트
+
+```shell
+npm run codeceptjs
 ```

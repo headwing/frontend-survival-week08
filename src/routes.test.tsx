@@ -1,22 +1,28 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 
+import { ThemeProvider } from 'styled-components';
 import routes from './routes';
+import defaultTheme from './styles/defaultTheme';
 
 const context = describe;
 
 describe('routes', () => {
   function renderRouter(path: string) {
     const router = createMemoryRouter(routes, { initialEntries: [path] });
-    render(<RouterProvider router={router} />);
+    render((
+      <ThemeProvider theme={defaultTheme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    ));
   }
 
   context('when the current path is “/”', () => {
     it('renders the intro page', () => {
       renderRouter('/');
 
-      screen.getByText(/Welcome/);
+      screen.getByText(/원하시는 주문을 터치해주세요/);
     });
   });
 
@@ -24,15 +30,17 @@ describe('routes', () => {
     it('renders the order page', () => {
       renderRouter('/order');
 
-      screen.getByText(/This is test/);
+      screen.getByText(/메가테라 푸드코트 키오스크/);
     });
   });
 
   context('when the current path is “/order/complete”', () => {
-    it('renders the order result page', () => {
-      renderRouter('/order/complete');
+    it('renders the order result page', async () => {
+      renderRouter('/order/complete?orderId="ID"');
 
-      screen.getByText(/Welcome/);
+      await waitFor(() => {
+        screen.getByText(/주문이 완료되었습니다!/);
+      });
     });
   });
 });

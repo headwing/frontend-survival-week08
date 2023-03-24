@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Switch from './header/Switch';
+import Switch from './Switch';
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const Title = styled.div`
   display: flex;
 
   h1 {
-    font-size: 3em;
+    font-size: 4.8rem;
     font-weight: bold;
     padding-inline: .3em;
     color: #FFFFFF;
