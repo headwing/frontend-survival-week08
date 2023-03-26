@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const Count = styled.h2`
-  font-size: 2em;
+  font-size: 3.2rem;
   display: flex;
   align-items: center;
   
@@ -21,7 +21,7 @@ const Count = styled.h2`
   }
   
   span:last-of-type {
-    font-size: .5em;
+    font-size: .75em;
     margin-left: .5em;
     padding: .5em 1em;
     border-radius: 1em;
@@ -31,7 +31,7 @@ const Count = styled.h2`
 `;
 
 const TotalPrice = styled.div`
-  font-size: 2em;
+  font-size: 3.2rem;
   
   strong {
     color: #FF8400;

@@ -8,7 +8,7 @@ const Container = styled.li`
 
 const Item = styled.button`
   border: 1px solid ${(props) => props.theme.colors.tertiary};
-  border-radius: 2rem;
+  border-radius: 2em;
   margin: 0;
   padding: 1em;
   background-color: ${(props) => props.theme.colors.tertiary};
@@ -28,9 +28,9 @@ const Item = styled.button`
   }
 
   span {
-    font-size: 1.5em;
+    font-size: 3.2rem;
     display: block;
-    padding-block: 1rem;
+    padding-block: .2em;
   }
 `;
 

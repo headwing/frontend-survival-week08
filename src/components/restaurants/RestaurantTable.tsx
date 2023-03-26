@@ -5,7 +5,7 @@ import Restaurant from '../../types/Restaurant';
 import RestaurantRow from './RestaurantRow';
 
 const Container = styled.div`
-  padding-block: 5rem;
+  padding-block: 3em;
   padding-inline: ${(props) => props.theme.sizes.contentPadding};
   border-top-right-radius: ${(props) => props.theme.sizes.contentBorderRadius};
   background-color: ${(props) => props.theme.colors.secondary};

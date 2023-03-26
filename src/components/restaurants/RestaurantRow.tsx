@@ -15,9 +15,9 @@ const Row = styled.tr`
   }
   
   td:first-of-type {
-    font-size: 2.5em;
+    font-size: 4.8rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5em;
   }
   
   td:last-of-type {

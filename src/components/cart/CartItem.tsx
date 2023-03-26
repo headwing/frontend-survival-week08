@@ -9,7 +9,7 @@ const Container = styled.li`
   background-color: ${(props) => props.theme.colors.secondary};
   
   span {
-    font-size: 1.2em;
+    font-size: 2.8rem;
     display: block;
     padding-block: 1em;
   }

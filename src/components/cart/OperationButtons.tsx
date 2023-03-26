@@ -6,8 +6,8 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 1.5em;
-  padding-block: 1.5em;
+  font-size: 2.8rem;
+  padding-block: 1.3em;
   width: 49%;
   border: 0;
   border-radius: 3em;

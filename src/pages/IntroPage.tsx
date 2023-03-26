@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 3em;
+  font-size: 4.8rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ const Button = styled.button`
   padding-block: 2.5em;
   width: 49%;
   border: 1px solid transparent;
-  border-radius: 2rem;
+  border-radius: 1em;
   background-color: ${(props) => props.theme.colors.secondary};
   cursor: pointer;
   
