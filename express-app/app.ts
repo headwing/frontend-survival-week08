@@ -53,7 +53,7 @@ app.post('/orders', (req, res) => {
     totalPrice,
   } = req.body;
 
-  const receipt = {
+  const order = {
     id: Date.now().toString(),
     menu,
     totalPrice,
@@ -61,10 +61,10 @@ app.post('/orders', (req, res) => {
 
   state.orders = [
     ...state.orders,
-    receipt,
+    order,
   ];
 
-  res.status(201).send({ id: receipt.id });
+  res.status(201).send({ id: order.id });
 });
 
 app.get('/restaurants', (req, res) => {

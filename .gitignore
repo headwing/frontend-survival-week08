@@ -132,6 +132,9 @@ dist
 # CodeceptJS
 output/
 
+# swc
+.swc/
+
 # IDEA
 .idea/
 

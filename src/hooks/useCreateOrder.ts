@@ -1,10 +1,12 @@
+import calculateTotalPrice from '../utils/calculateTotalPrice';
+
 import Food from '../types/Food';
 
 const url = 'http://localhost:3000/orders';
 
 export default function useCreateOrder() {
   const createOrder = async (menu: Food[]) => {
-    const totalPrice = menu.reduce((acc, cur) => acc + cur.price, 0);
+    const totalPrice = calculateTotalPrice(menu);
 
     const response = await fetch(url, {
       method: 'POST',
