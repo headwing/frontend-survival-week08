@@ -9,17 +9,17 @@ const Row = styled.tr`
   flex-direction: column;
   padding-block: 3em;
   border-bottom: 1px solid ${(props) => props.theme.colors.line};
-  
+
   &:last-of-type {
     border-bottom: 0;    
   }
-  
+
   td:first-of-type {
     font-size: 4.8rem;
     font-weight: bold;
     margin-bottom: .5em;
   }
-  
+
   td:last-of-type {
     width: 100%;
   }

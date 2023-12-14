@@ -35,18 +35,18 @@ const Button = styled.button`
   border-radius: 1em;
   background-color: ${(props) => props.theme.colors.secondary};
   cursor: pointer;
-  
+
   &:hover {
     border-color: ${(props) => props.theme.colors.buttonHoverBorder};
     background: ${(props) => props.theme.colors.buttonHoverBackground};
   }
-  
+
   img {
     display: block;
     margin-bottom: 1em;
     width: 40%;
   }
-  
+
   span {
     display: block;
   }

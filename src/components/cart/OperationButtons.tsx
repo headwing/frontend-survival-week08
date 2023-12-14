@@ -17,7 +17,7 @@ const Button = styled.button`
 
 const CancelButton = styled(Button)`
   background-color: #44272B;
-  
+
   &:hover {
     background-color: #170A0C;
   }
@@ -25,7 +25,7 @@ const CancelButton = styled(Button)`
 
 const OrderButton = styled(Button)`
   background-color: #FF8400;
-  
+
   &:hover {
     background-color: #D87000;
   }

@@ -12,7 +12,7 @@ import useCreateOrder from '../../hooks/useCreateOrder';
 const Container = styled.div`
   padding: ${(props) => props.theme.sizes.contentPadding};
   background: ${(props) => props.theme.colors.tertiary};
-  
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

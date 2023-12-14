@@ -4,11 +4,11 @@ import TextField from '../TextField';
 
 const Container = styled.div`
   padding-block: 1em 2em;
-  
+
   label {
     display: none;
   }
-  
+
   input {
     font-size: 3.2rem;
     padding: .5em;
@@ -18,7 +18,7 @@ const Container = styled.div`
     background: url("/images/icon-search.png") no-repeat 98% 50% / 4rem;
     color: #FFFFFF;
   }
-  
+
   input::placeholder {
     color: #FFFFFF;
   }

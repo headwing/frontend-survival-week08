@@ -13,13 +13,13 @@ const Count = styled.h2`
   font-size: 3.2rem;
   display: flex;
   align-items: center;
-  
+
   img {
     display: block;
     margin-right: .1em;
     width: 1.2em;
   }
-  
+
   span:last-of-type {
     font-size: .75em;
     margin-left: .5em;
@@ -32,7 +32,7 @@ const Count = styled.h2`
 
 const TotalPrice = styled.div`
   font-size: 3.2rem;
-  
+
   strong {
     color: #FF8400;
   }
