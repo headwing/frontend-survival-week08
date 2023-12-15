@@ -15,12 +15,12 @@ const Item = styled.button`
   text-align: start;
   color: ${(props) => props.theme.colors.text};
   cursor: pointer;
-  
+
   &:hover {
     border-color: ${(props) => props.theme.colors.buttonHoverBorder};
     background: ${(props) => props.theme.colors.buttonHoverBackground};
   }
-  
+
   img {
     display: block;
     margin: 0 auto;

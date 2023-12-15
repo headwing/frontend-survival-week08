@@ -13,17 +13,17 @@ const Container = styled.div`
   align-items: center;
   padding-block: 1em;
   border-bottom: 1px solid ${(props) => props.theme.colors.boldLine};
-  
+
   img {
     margin-bottom: .5em;
     width: 1.5em;
   }
-  
+
   h2 {
     width: 60%;
     text-align: center;
   }
-  
+
   p {
     font-size: 4.8rem;
     font-weight: normal;

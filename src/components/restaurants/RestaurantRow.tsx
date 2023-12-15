@@ -11,7 +11,7 @@ const Row = styled.tr`
   border-bottom: 1px solid ${(props) => props.theme.colors.line};
 
   &:last-of-type {
-    border-bottom: 0;    
+    border-bottom: 0;
   }
 
   td:first-of-type {

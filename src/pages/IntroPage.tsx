@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router';
 
 const Container = styled.div`
-  padding-block: 10em 25em; 
+  padding-block: 10em 25em;
   padding-inline: ${(props) => props.theme.sizes.contentPadding};
   background: ${(props) => props.theme.colors.layoutBackground};
 `;

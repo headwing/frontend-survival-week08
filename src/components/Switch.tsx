@@ -33,7 +33,7 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     border-radius: 3em;
     transition: .1s;
   }
-  
+
   ${(props) => props.active && css`
     background-color: #3A3A3A;
 
